@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Header from './components/Header';
-import ChatBox from './components/ChatBox';
 import SearchBar from './components/SearchBar';
-
+import ChatBox from './components/ChatBox';
 
 export default function App() {
   const [messages, setMessages] = useState([]);
@@ -74,10 +73,6 @@ const handleSend = async () => {
           </div>
         )}
       </div>
-
-// Inside your component's return:
-<SearchBar />
-<ChatBox messages={messages} />
 
       {/* ✅ Input section */}
       <div className="chat-input" style={{ display: 'flex', gap: '10px', padding: '10px 20px' }}>
