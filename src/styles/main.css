@@ -137,3 +137,93 @@ body {
   flex: 1;
   overflow-y: auto;
 }
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2em 1em;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.search-bar-container {
+  margin-bottom: 2em;
+}
+
+.search-bar-form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 2em;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.1);
+  padding: 0.5em 1.5em;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.6em 0.6em;
+  font-size: 1.1em;
+  background: transparent;
+}
+
+.search-icon-btn {
+  background: #fff;
+  border: none;
+  border-radius: 2em;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.10);
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.18s;
+  margin-left: 0.3em;
+}
+.search-icon-btn:active,
+.search-icon-btn:focus {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  outline: none;
+}
+.search-icon {
+  width: 1.5em;
+  height: 1.5em;
+  color: #555;
+}
+
+.search-results-block {
+  margin-top: 1em;
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.search-result-item {
+  margin-bottom: 1em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.7em;
+}
+.search-result-item a {
+  color: #1274da;
+  font-weight: 500;
+  text-decoration: none;
+}
+.search-result-desc {
+  color: #666;
+  font-size: 0.95em;
+  margin-top: 0.2em;
+}
+.search-error {
+  color: red;
+}
+
+.bottom-bar {
+  /* Your existing chat send bar style, as referenced in previous steps */
+  background: #fff;
+  border-radius: 2em;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1.5em;
+}
