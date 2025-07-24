@@ -3,8 +3,8 @@ import React from 'react'
 export default function Header() {
   return (
     <header className="header">
-      <h1>Answer<span className="highlight">AI</span></h1>
-      <p>Your AI-powered search engine and answer agent.</p>
+      <h1>Chat<span className="highlight">AI ⚛︎</span></h1>
+      <p1>Your AI-powered ChatBot</p1>
     </header>
   )
 }
