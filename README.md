@@ -2,7 +2,7 @@
 
 A fast, minimal, and mobile-friendly AI chat application built with React and Vite. Enjoy a seamless conversation flow with alternating chat bubbles, instant-tap smart suggestions, and a responsive design—packed into a clean, distraction-free interface.
 
-### Live at  https://chat-ai-website-six.vercel.app
+### Live at : https://chat-ai-website-six.vercel.app
 
 ## ⚡️Features
 
