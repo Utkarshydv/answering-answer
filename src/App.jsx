@@ -5,9 +5,8 @@ import ChatBox from './components/ChatBox';
 const suggestions = [
   "What can you do?",
   "How does AI work?",
-  "Give me a riddle",
-  "help me draft a polite email?",
-  "Good podcast recommendations?",
+  "Suggest podcasts",
+  "Give me a riddle"
 ];
 
 export default function App() {
@@ -36,26 +35,28 @@ export default function App() {
   };
 
   // Handles clicking a suggestion: sends instantly
-  const handleSuggestionClick = (suggest) => {
-    setInputValue(suggest);
-    setTimeout(() => { setInputValue(''); }, 0);
-    const userMessage = { type: 'user', message: suggest };
-    setMessages(prev => [...prev, userMessage]);
-    fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt: suggest }),
+const handleSuggestionClick = (suggest) => {
+  setInputValue(suggest);
+  setTimeout(() => { setInputValue(''); }, 0);
+  const userMessage = { type: 'user', message: suggest };
+  setMessages(prev => [...prev, userMessage]);
+  fetch('/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ prompt: suggest }),
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Add "AI:" prefix to the AI message here
+      const aiResponse = { type: 'ai', message: `AI: ${data.message}` };
+      setMessages(prev => [...prev, aiResponse]);
     })
-      .then(response => response.json())
-      .then(data => {
-        const aiResponse = { type: 'ai', message: data.message };
-        setMessages(prev => [...prev, aiResponse]);
-      })
-      .catch(() => {
-        const aiResponse = { type: 'ai', message: '⚠️ Failed to fetch AI response.' };
-        setMessages(prev => [...prev, aiResponse]);
-      });
-  };
+    .catch(() => {
+      const aiResponse = { type: 'ai', message: 'AI: ⚠️ Failed to fetch AI response.' };
+      setMessages(prev => [...prev, aiResponse]);
+    });
+};
+
 
   useEffect(() => {
     if (chatScrollRef.current) {
