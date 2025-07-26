@@ -22,3 +22,6 @@ A fast, minimal, and mobile-friendly AI chat application built with React and Vi
 >
 <img width="1218" height="679" alt="Screenshot 2025-07-25 at 5 45 57 AM" src="https://github.com/user-attachments/assets/d96ecb24-85a3-4271-8837-dea3098ff2d3" />
 by Utkarsh
+## License
+
+[MIT](LICENSE)
